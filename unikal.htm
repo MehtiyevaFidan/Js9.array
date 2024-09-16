@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp" />
+    <button onclick="Goster()">=</button>
+    <div id="cvb"></div>
+
+    <script>
+        function Goster() {
+            const inp = document.getElementById("inp").value;
+            const cvb = document.getElementById("cvb");
+            const arr = new Set();
+            for (let i = 0; i < inp.length; i++) {
+                arr.add(inp[i]);
+            }
+            const simvol = [];
+            arr.forEach(index => simvol.push(index));
+            if (simvol.length > 0) {
+                cvb.innerHTML = `${simvol.length} : ${simvol.join(", ")}`;
+            } else {
+                cvb.innerHTML = "Duzgun varianti elave et";            }
+        }
+    </script>
+</body>
+</html>

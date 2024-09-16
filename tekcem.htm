@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="inp" />
+    <button onclick="Topla()">=</button>
+    <div id="demo"></div>
+
+    <script>
+        function Topla() {
+            const inp = document.getElementById("inp").value;
+            const demo = document.getElementById("demo");
+            let kod = 0;
+            let tekReqemler = [];
+
+            for(let i = 0; i < inp.length; i++) {
+                let eded = +inp[i];
+                if (eded % 2 == 1) { 
+                    kod += eded;
+                    tekReqemler.push(eded); // concatlada yazmaq olardi, mence push daha mentiqlidi, umid edirem duz yazdim
+                }
+            }
+            demo.innerHTML = `${kod} (${tekReqemler.join(' + ')})`;
+        }
+    </script>
+</body>
+</html>

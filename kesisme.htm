@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Goster()">=</button>
+    <div id="demo"></div>
+    <script>
+        function Goster() {
+            let arr1 = [1, 2, 3, 7];
+            let arr2 = [3, 1, 6, 7, 8];
+            let kod = [];
+            const demo = document.getElementById("demo");
+            
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr2.includes(arr1[i]) && !kod.includes(arr1[i])) {
+                    kod.push(arr1[i]);
+                }
+            }
+            if (kod.length > 0) {
+                demo.innerHTML = `Output : ${kod}`;
+            } else {
+                demo.innerHTML = "Netice yoxdur";
+            }
+        }
+    </script>
+</body>
+</html>

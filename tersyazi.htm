@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="cumleniCevir()">Çevir</button>
+    <div class="demo"></div>
+    <script>
+        let demo = document.querySelector(".demo");
+        let inp = document.getElementById("inp");
+        function cumleniCevir() {
+            let cumle = inp.value;
+            demo.innerHTML = cumle.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>
